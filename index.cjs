@@ -1,5 +1,5 @@
 const mineflayer = require('mineflayer');
-const express = require('express');  // <--- This was missing
+const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
@@ -12,9 +12,10 @@ app.listen(3000, () => {
 
 function createBot() {
   const bot = mineflayer.createBot({
-    host: 'Donutsmp.net', // Server IP
+    host: 'Donutsmp.net',               // Server IP
     username: 'roheith.mc@outlook.com', // Microsoft account email
-    auth: 'microsoft'
+    auth: 'microsoft',
+    version: '1.21.4'                   // ✅ Set Minecraft version explicitly
   });
 
   bot.on('spawn', () => {
