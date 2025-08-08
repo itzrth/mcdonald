@@ -14,8 +14,7 @@ function createBot() {
   const bot = mineflayer.createBot({
     host: 'Donutsmp.net', // Server IP
     username: 'roheith.mc@outlook.com', // Microsoft account email
-    auth: 'microsoft', // Microsoft authentication
-    version: '1.21.4' // Match server version
+    auth: 'microsoft'
   });
 
   bot.on('spawn', () => {
